@@ -1,4 +1,4 @@
-~~# SubwayTooter~~ cybre.space pinger
+# ~~SubwayTooter~~ cybre.space pinger
 Mastodon client app for ~~Android~~ cybre.space peeps
 
 * Android 5.0 or later
