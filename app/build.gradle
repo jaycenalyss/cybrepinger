@@ -1,0 +1,84 @@
+import java.text.SimpleDateFormat
+
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '25.0.2'
+    defaultConfig {
+        applicationId "com.jaycen.cybrepinger"
+        minSdkVersion 21
+        targetSdkVersion 25
+        versionCode 80
+        versionName "0.8.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    productFlavors {
+        rc {
+        }
+    }
+
+    // Generate Signed APK のファイル名を変更
+    applicationVariants.all { variant ->
+        if (variant.buildType.name == "release") {
+            variant.outputs.each { output ->
+                if (output.outputFile != null && output.outputFile.name.endsWith('.apk')) {
+                    // Rename APK
+                    def versionCode = defaultConfig.versionCode
+                    def versionName = defaultConfig.versionName
+                    def flavor = variant.flavorName
+                    def date = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date())
+                    def newName = "cybrepinger-${flavor}-${versionCode}-${versionName}-${date}.apk"
+                    output.outputFile = new File((String) output.outputFile.parent, (String) newName)
+                }
+            }
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:support-v4:25.3.1'
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.android.support:customtabs:25.3.1'
+    compile 'com.android.support:support-v4:25.3.1'
+
+    compile 'com.google.firebase:firebase-core:10.0.1'
+    compile 'com.google.firebase:firebase-messaging:10.0.1'
+
+//    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+
+    testCompile 'junit:junit:4.12'
+//    compile 'com.android.volley:volley:1.0.0'
+    compile 'com.squareup.okhttp3:okhttp:3.8.0'
+ //   compile 'com.squareup.okhttp3:okhttp-urlconnection:3.8.0' // Vollery に使う
+    compile 'commons-io:commons-io:2.4'
+    compile 'uk.co.chrisjenx:calligraphy:2.2.0'
+    compile 'com.github.woxthebox:draglistview:1.4.3'
+    compile 'com.github.omadahealth:swipy:1.2.3@aar'
+    compile 'com.jrummyapps:colorpicker:2.1.7'
+    //    compile 'com.astuetz:pagerslidingtabstrip:1.0.1'
+    compile 'com.github.kenglxn.QRGen:android:2.2.0'
+    compile project(':exif')
+
+    compile 'com.github.bumptech.glide:glide:3.8.0'
+//    annotationProcessor 'com.github.bumptech.glide:compiler:3.8.0'
+    compile 'com.github.bumptech.glide:okhttp3-integration:1.5.0'
+
+    compile 'org.hjson:hjson:2.1.1'
+}
+
+// apply plugin: 'com.google.gms.google-services'
+

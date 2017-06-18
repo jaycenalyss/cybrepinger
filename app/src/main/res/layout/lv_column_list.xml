@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.woxthebox.draglistview.swipe.ListSwipeItem
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:leftViewId="@+id/item_left"
+    app:rightViewId="@+id/item_right"
+    app:swipeViewId="@+id/item_layout">
+
+    <TextView
+        android:id="@+id/item_left"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/item_layout"
+        android:layout_alignTop="@+id/item_layout"
+        android:background="#0088ff"
+        android:gravity="center"
+        android:paddingEnd="12dp"
+        android:paddingStart="12dp"
+        android:text="@string/app_name"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/item_right"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/item_layout"
+        android:layout_alignTop="@+id/item_layout"
+        android:background="?attr/colorColumnListDeleteBackground"
+        android:gravity="center_vertical"
+
+        android:paddingEnd="12dp"
+        android:paddingStart="12dp"
+        android:text="@string/delete"
+        android:textColor="?attr/colorColumnListDeleteText"
+        android:textSize="20sp"/>
+
+    <LinearLayout
+        android:id="@id/item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/column_list_selector"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingEnd="12dp"
+        android:paddingStart="12dp"
+        >
+        <!-- minHeight の代わりにViewで賄う -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            />
+
+        <ImageView
+            android:id="@+id/ivDragHandle"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="4dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginTop="4dp"
+            android:background="?attr/colorColumnListDragHandleBackground"
+            android:contentDescription="@string/drag_handle"
+            android:scaleType="center"
+            android:src="?attr/ic_knob"
+            />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/tvAccess"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:textColor="?attr/colorColumnListItemText"
+                android:textSize="14sp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                >
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginEnd="4dp"
+                    android:id="@+id/ivColumnIcon"
+                    />
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="18sp"
+                    />
+                <ImageView
+                    android:id="@+id/ivBookmark"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="6dp"
+                    android:contentDescription="@string/last_selection"
+                    android:scaleType="center"
+                    android:src="?attr/ic_bookmark"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</com.woxthebox.draglistview.swipe.ListSwipeItem>

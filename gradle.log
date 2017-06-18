@@ -1,0 +1,89 @@
+NDK is missing a "platforms" directory.
+If you are using NDK, verify the ndk.dir is set to a valid NDK directory.  It is currently set to D:\Android\sdk\ndk-bundle.
+If you are not using NDK, unset the NDK variable from ANDROID_NDK_HOME or local.properties to remove this warning.
+
+NDK is missing a "platforms" directory.
+If you are using NDK, verify the ndk.dir is set to a valid NDK directory.  It is currently set to D:\Android\sdk\ndk-bundle.
+If you are not using NDK, unset the NDK variable from ANDROID_NDK_HOME or local.properties to remove this warning.
+
+Incremental java compilation is an incubating feature.
+:app:preBuild UP-TO-DATE
+:app:preRcDebugBuild UP-TO-DATE
+:app:checkRcDebugManifest
+:app:preRcReleaseBuild UP-TO-DATE
+:app:prepareComAndroidSupportAnimatedVectorDrawable2531Library
+:app:prepareComAndroidSupportAppcompatV72531Library
+:app:prepareComAndroidSupportCustomtabs2531Library
+:app:prepareComAndroidSupportDesign2531Library
+:app:prepareComAndroidSupportRecyclerviewV72531Library
+:app:prepareComAndroidSupportSupportCompat2531Library
+:app:prepareComAndroidSupportSupportCoreUi2531Library
+:app:prepareComAndroidSupportSupportCoreUtils2531Library
+:app:prepareComAndroidSupportSupportFragment2531Library
+:app:prepareComAndroidSupportSupportMediaCompat2531Library
+:app:prepareComAndroidSupportSupportV42531Library
+:app:prepareComAndroidSupportSupportVectorDrawable2531Library
+:app:prepareComAndroidSupportTransition2531Library
+:app:prepareComGithubOmadahealthSwipy123Library
+:app:prepareComGithubWoxtheboxDraglistview143Library
+:app:prepareComGoogleAndroidGmsPlayServicesBasement1001Library
+:app:prepareComGoogleAndroidGmsPlayServicesTasks1001Library
+:app:prepareComGoogleFirebaseFirebaseAnalytics1001Library
+:app:prepareComGoogleFirebaseFirebaseAnalyticsImpl1001Library
+:app:prepareComGoogleFirebaseFirebaseCommon1001Library
+:app:prepareComGoogleFirebaseFirebaseCore1001Library
+:app:prepareComGoogleFirebaseFirebaseIid1001Library
+:app:prepareComGoogleFirebaseFirebaseMessaging1001Library
+:app:prepareComJrummyappsColorpicker217Library
+:app:prepareUkCoChrisjenxCalligraphy220Library
+:exif:preBuild UP-TO-DATE
+:exif:preReleaseBuild UP-TO-DATE
+:exif:checkReleaseManifest
+:exif:prepareReleaseDependencies
+:exif:compileReleaseAidl UP-TO-DATE
+:exif:compileReleaseNdk UP-TO-DATE
+:exif:compileLint UP-TO-DATE
+:exif:copyReleaseLint UP-TO-DATE
+:exif:mergeReleaseShaders UP-TO-DATE
+:exif:compileReleaseShaders UP-TO-DATE
+:exif:generateReleaseAssets UP-TO-DATE
+:exif:mergeReleaseAssets UP-TO-DATE
+:exif:mergeReleaseProguardFiles UP-TO-DATE
+:exif:packageReleaseRenderscript UP-TO-DATE
+:exif:compileReleaseRenderscript UP-TO-DATE
+:exif:generateReleaseResValues UP-TO-DATE
+:exif:generateReleaseResources UP-TO-DATE
+:exif:packageReleaseResources UP-TO-DATE
+:exif:processReleaseManifest UP-TO-DATE
+:exif:generateReleaseBuildConfig UP-TO-DATE
+:exif:processReleaseResources UP-TO-DATE
+:exif:generateReleaseSources UP-TO-DATE
+:exif:incrementalReleaseJavaCompilationSafeguard UP-TO-DATE
+:exif:javaPreCompileRelease
+:exif:compileReleaseJavaWithJavac UP-TO-DATE
+:exif:processReleaseJavaRes UP-TO-DATE
+:exif:transformResourcesWithMergeJavaResForRelease UP-TO-DATE
+:exif:transformClassesAndResourcesWithSyncLibJarsForRelease UP-TO-DATE
+:exif:mergeReleaseJniLibFolders UP-TO-DATE
+:exif:transformNativeLibsWithMergeJniLibsForRelease UP-TO-DATE
+:exif:transformNativeLibsWithSyncJniLibsForRelease UP-TO-DATE
+:exif:bundleRelease UP-TO-DATE
+:app:prepareRcDebugDependencies
+:app:compileRcDebugAidl UP-TO-DATE
+:app:compileRcDebugRenderscript UP-TO-DATE
+:app:generateRcDebugBuildConfig UP-TO-DATE
+:app:generateRcDebugResValues UP-TO-DATE
+:app:generateRcDebugResources UP-TO-DATE
+:app:mergeRcDebugResources UP-TO-DATE
+:app:processRcDebugManifest UP-TO-DATE
+:app:processRcDebugResources UP-TO-DATE
+:app:generateRcDebugSources UP-TO-DATE
+:app:incrementalRcDebugJavaCompilationSafeguard UP-TO-DATE
+:app:javaPreCompileRcDebug
+:app:compileRcDebugJavaWithJavac
+:app:compileRcDebugJavaWithJavac - is not incremental (e.g. outputs have changed, no previous execution, etc.).
+:app:compileRcDebugJavaWithJavac FAILED
+
+BUILD FAILED
+
+Total time: 2.173 secs
